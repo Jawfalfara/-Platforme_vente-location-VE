@@ -146,7 +146,6 @@ rouge-score==0.0.4
 sacremoses==0.0.43
 seaborn==0.11.0
 Send2Trash==1.5.0
-torchvision==0.8.1
 torchviz==0.0.1
 tornado==6.0.4
 tqdm==4.48.2
