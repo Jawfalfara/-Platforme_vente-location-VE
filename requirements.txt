@@ -1,10 +1,10 @@
-dialect = "mysql"
-driver = "pymysql"
-host = "123.456.789.123"
-port = "3306"
-database = "my_database"
-username = "my_user"
-password = "mypassword"
+dialect == "mysql"
+driver == "pymysql"
+host == "123.456.789.123"
+port == "3306"
+database == "my_database"
+username == "my_user"
+password == "mypassword"
 
 absl-py==0.11.0
 adal==1.2.4
