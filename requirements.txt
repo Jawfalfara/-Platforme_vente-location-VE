@@ -135,6 +135,7 @@ pylint
 pymdown-extensions==8.0
 pyrsistent==0.16.0
 pytest==6.0.1
+python
 pytest-cov==2.10.1
 python-dateutil==2.8.1
 python-slugify==4.0.1
