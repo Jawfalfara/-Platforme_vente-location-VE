@@ -154,11 +154,6 @@ elif menu == "Mise à jour":
             st.success(f"Disponibilité du véhicule '{vehicule_a_mettre_a_jour}' mise à jour avec succès !")
             st.dataframe(df)
 
- [theme]
-base="dark"
-primaryColor="#b31c1c"
-backgroundColor="#c36966"
-secondaryBackgroundColor="#2e3026"
-font="monospace"
+ 
 
             
