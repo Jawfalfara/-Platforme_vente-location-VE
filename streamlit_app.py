@@ -9,6 +9,36 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
+
+import numpy as np
+import pandas as pd
+import plotly as py
+import streamlit as st 
+import query
+import altair as alt
+from streamlit_option_menu import option_menu 
+from numerize.numerize import numerize 
+import plotly.graph_objs as go
+import plotly.figure_factory as ff
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+import plotly.express as px
+import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib as plt
+import warnings
+warnings.filterwarnings('ignore')
+
+
+#########################################
+#DATA EXPLORER
+#########################################
+#import streamlit as st
+import pandas as pd
+import requests
+import io
+
+
+
 # Importer les données
 df = pd.read_csv('IEA Global EV Data 2024.csv')
 # Afficher les premières lignes du DataFrame
