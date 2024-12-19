@@ -86,13 +86,14 @@ def load_data():
 
 # Charger les données
 df = load_data()
-[theme]
-primaryColor="#9e8d88"
-backgroundColor="#9ee450"
-secondaryBackgroundColor="#f6f1f0"
-textColor="#3f3331"
-font="monospace"
 
+# Set a custom theme
+st_theme.set_theme(
+    background_color='#FFFFFF',
+    primary_color='#1A73E8',
+    secondary_background_color='#F1F3F4',
+    text_color='#202124',
+    font='sans serif'
 
 # Titre de l'application
 st.title("Gestion des Ventes et Locations de Véhicules Électriques")
