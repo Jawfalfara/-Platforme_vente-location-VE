@@ -181,30 +181,23 @@ elif menu == "Mise à jour":
  ################################
 #VISUALIZATIONS 
 ################################ 
-import matplotlib.pyplot as plt
+import keras
+from matplotlib import pyplot as plt
+history = model1.fit(train_x, train_y,validation_split = 0.1, epochs=50, batch_size=4)
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper left')
+plt.show()
 
-# Visualisation des performances
-plt.figure(figsize=(14, 6))
-
-# Précision
-plt.subplot(1, 2, 1)
-plt.plot(history.history['accuracy'], label='Précision Entraînement', color='blue')
-plt.plot(history.history['val_accuracy'], label='Précision Validation', color='orange')
-plt.title('Précision au fil des époques')
-plt.xlabel('Époques')
-plt.ylabel('Précision')
-plt.legend()
-
-# Perte
-plt.subplot(1, 2, 2)
-plt.plot(history.history['loss'], label='Perte Entraînement', color='blue')
-plt.plot(history.history['val_loss'], label='Perte Validation', color='orange')
-plt.title('Perte au fil des époques')
-plt.xlabel('Époques')
-plt.ylabel('Perte')
-plt.legend()
-
-plt.tight_layout()
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper left')
 plt.show()
 
 
