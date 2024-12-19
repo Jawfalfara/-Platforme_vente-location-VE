@@ -87,14 +87,6 @@ def load_data():
 # Charger les données
 df = load_data()
 
-# Set a custom theme
-st_theme.set_theme(
-    background_color='#FFFFFF',
-    primary_color='#1A73E8',
-    secondary_background_color='#F1F3F4',
-    text_color='#202124',
-    font='sans serif'
-)
 
 # Titre de l'application
 st.title("Gestion des Ventes et Locations de Véhicules Électriques")
@@ -164,7 +156,9 @@ elif menu == "Mise à jour":
             st.success(f"Disponibilité du véhicule '{vehicule_a_mettre_a_jour}' mise à jour avec succès !")
             st.dataframe(df)
 
- 
+ ################################
+#VISUALIZATIONS 
+################################ 
  
 
 
