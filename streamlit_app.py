@@ -85,6 +85,13 @@ def load_data():
 
 # Charger les données
 df = load_data()
+[theme]
+primaryColor="#9e8d88"
+backgroundColor="#9ee450"
+secondaryBackgroundColor="#f6f1f0"
+textColor="#3f3331"
+font="monospace"
+
 
 # Titre de l'application
 st.title("Gestion des Ventes et Locations de Véhicules Électriques")
@@ -155,5 +162,7 @@ elif menu == "Mise à jour":
             st.dataframe(df)
 
  
+ 
+
 
             
