@@ -191,6 +191,31 @@ elif menu == "Mise à jour":
  ################################
 #VISUALIZATIONS 
 ################################ 
+import matplotlib.pyplot as plt
+
+# Visualisation des performances
+plt.figure(figsize=(14, 6))
+
+# Précision
+plt.subplot(1, 2, 1)
+plt.plot(history.history['accuracy'], label='Précision Entraînement', color='blue')
+plt.plot(history.history['val_accuracy'], label='Précision Validation', color='orange')
+plt.title('Précision au fil des époques')
+plt.xlabel('Époques')
+plt.ylabel('Précision')
+plt.legend()
+
+# Perte
+plt.subplot(1, 2, 2)
+plt.plot(history.history['loss'], label='Perte Entraînement', color='blue')
+plt.plot(history.history['val_loss'], label='Perte Validation', color='orange')
+plt.title('Perte au fil des époques')
+plt.xlabel('Époques')
+plt.ylabel('Perte')
+plt.legend()
+
+plt.tight_layout()
+plt.show()
 
 
             
