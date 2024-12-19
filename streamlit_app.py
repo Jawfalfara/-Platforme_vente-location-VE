@@ -94,6 +94,7 @@ st_theme.set_theme(
     secondary_background_color='#F1F3F4',
     text_color='#202124',
     font='sans serif'
+)
 
 # Titre de l'application
 st.title("Gestion des Ventes et Locations de Véhicules Électriques")
