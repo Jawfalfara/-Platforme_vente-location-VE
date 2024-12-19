@@ -12,3 +12,4 @@ streamlit-option-menu == 0.4.0
 numerize == 0.12
 streamlit-themes== 0.1.0
 keras == 3.7.0
+trackable == 0.1.0
