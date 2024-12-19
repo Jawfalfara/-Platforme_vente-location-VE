@@ -29,6 +29,38 @@ import streamlit_themes as st_theme
 import warnings
 warnings.filterwarnings('ignore')
 
+#Streamlit Configuration 
+
+#######################
+# Page configuration
+st.set_page_config(
+    page_title="Plateforme",
+    page_icon="🧠",
+    layout="wide",
+    initial_sidebar_state="expanded")
+
+alt.themes.enable("dark")
+
+#######################
+# CSS styling
+
+
+st.markdown("""
+<style>
+    [data-testid=stSidebar] {
+        background-color: #1b2631;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+    <style>
+    .stForm {
+        background-color: #1b2631;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 
 #########################################
 #DATA EXPLORER
