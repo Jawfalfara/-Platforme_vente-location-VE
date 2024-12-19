@@ -193,4 +193,53 @@ plt.legend(['train', 'val'], loc='upper left')
 plt.show()
 
 
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper left')
+plt.show()
+
+
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+# Create figure with secondary y-axis
+fig = make_subplots(specs=[[{"secondary_y": True}]])
+
+# Add traces
+fig.add_trace(
+    go.Scatter( y=history.history['val_loss'], name="val_loss"),
+    secondary_y=False,
+)
+
+fig.add_trace(
+    go.Scatter( y=history.history['loss'], name="loss"),
+    secondary_y=False,
+)
+
+fig.add_trace(
+    go.Scatter( y=history.history['val_accuracy'], name="val accuracy"),
+    secondary_y=True,
+)
+
+fig.add_trace(
+    go.Scatter( y=history.history['accuracy'], name="val accuracy"),
+    secondary_y=True,
+)
+
+# Add figure title
+fig.update_layout(
+    title_text="Loss/Accuracy of LSTM Model"
+)
+
+# Set x-axis title
+fig.update_xaxes(title_text="Epoch")
+
+# Set y-axes titles
+fig.update_yaxes(title_text="<b>primary</b> Loss", secondary_y=False)
+fig.update_yaxes(title_text="<b>secondary</b> Accuracy", secondary_y=True)
+
+fig.show()
             
