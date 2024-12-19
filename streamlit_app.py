@@ -25,6 +25,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib as plt
+import streamlit_themes as st_theme
 import warnings
 warnings.filterwarnings('ignore')
 
