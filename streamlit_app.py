@@ -159,7 +159,10 @@ elif menu == "Mise à jour":
  ################################
 #VISUALIZATIONS 
 ################################ 
-
+import streamlit as st
+from streamlit_theme import st_theme
+theme = st_theme()
+st.write(theme)
 # Set a custom theme
 st_theme.set_theme(
 base="light",
