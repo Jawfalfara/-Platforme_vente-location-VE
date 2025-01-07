@@ -129,7 +129,7 @@ st.title("Gestion des Ventes et Locations de Véhicules Électriques")
 menu = st.sidebar.radio("Menu", ["Accueil", "Liste des véhicules", "Ajouter un véhicule","Vehicule de remplacement","Mise à jour"])
 
 if menu == "Accueil":
-    st.header("DALAL JAAM")
+    st.header("DALAL AK JAAM")
     st.write("""
     Cette plateforme permet de gérer efficacement les ventes et locations de véhicules électriques. 
     Utilisez le menu pour consulter la liste des véhicules, en ajouter ou mettre à jour leur état.
@@ -190,68 +190,5 @@ elif menu == "Mise à jour":
             st.success(f"Disponibilité du véhicule '{vehicule_a_mettre_a_jour}' mise à jour avec succès !")
             st.dataframe(df)
 
- ################################
-#VISUALIZATIONS 
-################################ 
-import keras
-from matplotlib import pyplot as plt
-history = model1.fit(train_x, train_y,validation_split = 0.1, epochs=50, batch_size=4)
-plt.plot(history.history['accuracy'])
-plt.plot(history.history['val_accuracy'])
-plt.title('model accuracy')
-plt.ylabel('accuracy')
-plt.xlabel('epoch')
-plt.legend(['train', 'val'], loc='upper left')
-plt.show()
 
 
-plt.plot(history.history['loss'])
-plt.plot(history.history['val_loss'])
-plt.title('model loss')
-plt.ylabel('loss')
-plt.xlabel('epoch')
-plt.legend(['train', 'val'], loc='upper left')
-plt.show()
-
-
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-
-# Create figure with secondary y-axis
-fig = make_subplots(specs=[[{"secondary_y": True}]])
-
-# Add traces
-fig.add_trace(
-    go.Scatter( y=history.history['val_loss'], name="val_loss"),
-    secondary_y=False,
-)
-
-fig.add_trace(
-    go.Scatter( y=history.history['loss'], name="loss"),
-    secondary_y=False,
-)
-
-fig.add_trace(
-    go.Scatter( y=history.history['val_accuracy'], name="val accuracy"),
-    secondary_y=True,
-)
-
-fig.add_trace(
-    go.Scatter( y=history.history['accuracy'], name="val accuracy"),
-    secondary_y=True,
-)
-
-# Add figure title
-fig.update_layout(
-    title_text="Loss/Accuracy of LSTM Model"
-)
-
-# Set x-axis title
-fig.update_xaxes(title_text="Epoch")
-
-# Set y-axes titles
-fig.update_yaxes(title_text="<b>primary</b> Loss", secondary_y=False)
-fig.update_yaxes(title_text="<b>secondary</b> Accuracy", secondary_y=True)
-
-fig.show()
-            
