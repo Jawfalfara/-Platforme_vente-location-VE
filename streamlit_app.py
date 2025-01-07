@@ -1,8 +1,6 @@
 import streamlit as st
 import warnings
-warnings.filterwarnings('ignore')
-# Import necessary libraries
-import pandas as pd # type: ignore
+import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
