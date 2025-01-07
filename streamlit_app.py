@@ -1,26 +1,50 @@
 
+
+import streamlit as st
+
+import warnings
+warnings.filterwarnings('ignore')
+# Import necessary libraries
+import pandas as pd # type: ignore
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
+# Importer les données
+df = pd.read_csv('IEA Global EV Data 2024.csv')
+# Afficher les premières lignes du DataFrame
+df.head()
+# Afficher les informations générales
+df.info()
+# Afficher les statistiques descriptives
+print(df.describe())
+# valeurs nulles
+df.isnull().sum()
+#  supprimer les lignes avec des valeurs manquantes (if any)
+df.duplicated()
+df.drop_duplicates(inplace=True)
 
-import numpy as np
+import streamlit as st
+
+from gettext import install
+
+import streamlit as st
 import pandas as pd
-import plotly as py
-import streamlit as st 
-import query
-import altair as alt
-from streamlit_option_menu import option_menu 
-from numerize.numerize import numerize 
-import plotly.graph_objs as go
-import plotly.figure_factory as ff
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-import plotly.express as px
-import matplotlib.pyplot as plt
-import seaborn as sns
-import matplotlib as plt
-import streamlit_themes as st_theme
-import warnings
-warnings.filterwarnings('ignore')
+
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+import string
+import streamlit as st
+
+import streamlit as st
+import pandas as pd
+
 
 
 
