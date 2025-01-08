@@ -48,25 +48,7 @@ import string
 
 
 
-#######################
-# CSS styling
 
-
-st.markdown("""
-<style>
-    [data-testid=stSidebar] {
-        background-color: #1b2631;
-    }
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-    <style>
-    .stForm {
-        background-color: #1b2631;
-    }
-    </style>
-""", unsafe_allow_html=True)
 
 #########################################
 #DATA EXPLORER
