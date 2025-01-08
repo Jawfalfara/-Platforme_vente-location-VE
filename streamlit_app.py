@@ -24,12 +24,8 @@ df.isnull().sum()
 df.duplicated()
 df.drop_duplicates(inplace=True)
 
-import streamlit as st
 
 from gettext import install
-
-import streamlit as st
-import pandas as pd
 
 import nltk
 nltk.download('punkt')
@@ -40,8 +36,6 @@ from nltk.stem import WordNetLemmatizer
 import string
 import streamlit as st
 
-import streamlit as st
-import pandas as pd
 
 # Initialisation des données
 @st.cache_data
